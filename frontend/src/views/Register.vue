@@ -73,26 +73,6 @@ const handleRegister = async () => {
 <style scoped>
 .login-page {
   min-height: 100vh;
-  display: 的热带风暴。预报显示，这个低压系统将向西北方向移动，强度可能进一步增强。
-
-现在请根据以上内容，回答以下问题：
-1. 该低压系统的中心位置在哪里？
-2. 预计其移动方向和速度是什么？
-3. 是否有热带风暴或台风生成？
-
-<div class="info-box">
-  <h3>菲律宾</h3>
-  <p>棉兰老岛以东的热带低压</p>
-</div>
-
-<div class="info-box">
-  <h3>数值预报</h3>
-  <p>预计向西北方向移动，强度可能增强</p>
-</div>
-
-<style>
-.login-page {
-  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
