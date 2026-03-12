@@ -1,6 +1,6 @@
 # 🌍 Travel Blog - 旅游博客系统
 
-> 前后端分离项目 (Vue3 + Spring Boot + MySQL)
+> 前后端分离项目 (Vue3 + Spring Boot + MySQL) | **Version 1.0.0**
 
 ## 📋 项目简介
 
@@ -14,12 +14,14 @@
 - **Pinia** - 状态管理
 - **Vue Router** - 路由管理
 - **Axios** - HTTP 请求
+- **Element Plus** - UI 组件库
+- **Markdown-it** - Markdown 解析
 
 ### 后端
-- **Java** - 编程语言
-- **Spring Boot** - 后端框架
+- **Java 17** - 编程语言
+- **Spring Boot 3.2** - 后端框架
 - **MyBatis-Plus** - ORM 框架
-- **MySQL** - 数据库
+- **MySQL 8.0** - 数据库
 
 ## 📁 项目结构
 
@@ -31,12 +33,11 @@ travel-blog/
 │   │   ├── components/# 公共组件
 │   │   ├── api/      # API 接口
 │   │   ├── router/   # 路由配置
-│   │   ├── store/    # 状态管理
-│   │   └── assets/   # 静态资源
+│   │   └── store/    # 状态管理
 │   └── ...
 │
 ├── backend/          # Spring Boot 后端项目
-│   ├── src/main/java/
+│   ├── src/main/java/com/travelblog/
 │   │   ├── controller/  # 控制器
 │   │   ├── service/    # 业务逻辑
 │   │   ├── mapper/     # 数据访问
@@ -44,7 +45,7 @@ travel-blog/
 │   │   ├── dto/        # 数据传输对象
 │   │   └── config/     # 配置类
 │   └── resources/
-│       └── mapper/     # MyBatis 映射文件
+│       └── application.yml
 │
 └── docs/             # 项目文档
     ├── API.md         # 接口文档
@@ -62,22 +63,51 @@ npm install
 npm run dev
 ```
 
+访问 http://localhost:3000
+
 ### 后端启动
 
 ```bash
+# 1. 创建数据库
+mysql -u root -p < docs/database.md
+
+# 2. 配置数据库连接 (修改 backend/src/main/resources/application.yml)
+
+# 3. 启动后端
 cd backend
-# 配置数据库连接
 ./mvnw spring-boot:run
 ```
 
+服务端口: http://localhost:8080
+
+## 📦 功能列表
+
+- [x] 用户注册/登录
+- [x] 文章列表/详情
+- [x] 文章发布/编辑/删除
+- [x] 文章分类
+- [x] 文章标签
+- [x] 评论功能
+- [x] 点赞功能
+- [x] 用户头像
+- [x] Markdown 支持
+
+## 📝 API 接口
+
+详见 [API.md](docs/API.md)
+
+## 📊 数据库设计
+
+详见 [database.md](docs/database.md)
+
 ## 👥 团队成员
 
-| 角色 | 姓名 | 职责 |
-|------|------|------|
-| PM | - | 项目管理、需求分析 |
-| 前端开发 | - | Vue3 开发 |
-| 后端开发 | - | Java API 开发 |
-| Reviewer | - | 代码审核 |
+| 角色 | 职责 |
+|------|------|
+| PM | 项目管理、需求分析 |
+| 前端开发 | Vue3 开发 |
+| 后端开发 | Java API 开发 |
+| Reviewer | 代码审核 |
 
 ## 🔀 Git 工作流
 
@@ -91,17 +121,10 @@ develop (开发主分支)
   └── hotfix/xxx (紧急修复分支)
 ```
 
-### 分支命名规范
-- 功能分支: `feature/<issue-id>-<功能名>`
-- 修复分支: `bugfix/<issue-id>-<问题描述>`
-- 热修复: `hotfix/<issue-id>-<问题描述>`
-
-### PR 流程
-1. 从 `develop` 创建分支
-2. 开发完成后提交 PR
-3. 至少一人 Review 通过
-4. 合并到 `develop`
-
 ## 📄 许可证
 
 MIT License
+
+---
+
+**Copyright © 2024 Travel Blog**
