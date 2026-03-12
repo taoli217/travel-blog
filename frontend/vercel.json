@@ -1,5 +1,5 @@
 {
   "rewrites": [
-    { "source": "/api/:path*", "destination": "https://travel-blog-api.onrender.com/api/:path*" }
+    { "source": "/api/:path*", "destination": "https://travel-blog-production-8360.up.railway.app/api/:path*" }
   ]
 }
