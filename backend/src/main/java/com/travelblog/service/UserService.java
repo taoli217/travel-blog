@@ -55,7 +55,7 @@ public class UserService {
         }
 
         // 生成token (简化版，实际应使用JWT)
-        String token = md5(user.getId() + System.currentTimeMillis());
+        String token = md5(user.getId() + "" + System.currentTimeMillis());
         
         Map<String, Object> data = new HashMap<>();
         data.put("token", token);
